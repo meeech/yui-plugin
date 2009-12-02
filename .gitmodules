@@ -1,0 +1,3 @@
+[submodule "vendors/phploader"]
+	path = vendors/phploader
+	url = git://github.com/yui/phploader.git
