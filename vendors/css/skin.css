@@ -1,0 +1,119 @@
+/* foundational CSS for datatable
+no touchy. 
+Skin is 3 classes below.
+*/
+/* mask */
+.yui-dt .yui-dt-mask {
+    position:absolute;
+    z-index:9500;
+}
+
+/* sortable columns */
+
+.yui-dt thead .yui-dt-sortable {
+    cursor:pointer;
+}
+
+/* draggable columns */
+.yui-dt thead .yui-dt-draggable {
+    cursor: move;
+}
+
+/* Datatable Skin(s) */
+/* 
+.yui-skin-plank is the more top level class, so use that if its for all.
+div.plank-datatable is the basic wrapper around any table. this lets the js just hook on. 
+*/
+
+/* Basic text style in header. */
+div.plank-datatable th{
+	color: #fff;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+/* Basic Sorting text style in header. */
+div.plank-datatable th a{
+	color: #fff;
+	background-color: transparent;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+div.plank-datatable th a.yui-dt-sortable {
+	text-decoration: underline;
+}
+
+/*@group Ascending & Descending indicators*/
+/* Example: ASC/DESC class. Use these to add in bg img of up/down arrows.*/
+div.plank-datatable th.yui-dt-asc {
+	background-color:blue;
+}
+
+div.plank-datatable th.yui-dt-desc {
+	background-color: brown;
+}
+/*@end*/
+/* @group Datatable Loading Message */
+/* Example for Loading announcement. could also have a bg img.  */
+.yui-skin-plank tbody.yui-dt-message td.yui-dt-loading{
+	position: absolute;
+	background: #278DC0;
+	border: 1px solid lightgrey;
+}
+
+.yui-skin-plank tbody.yui-dt-message td.yui-dt-loading div.yui-dt-liner {
+	color: #ddd;
+	font-weight: bold;
+	padding: 0 20px 0 0;	
+}
+/*@end*/
+
+/*@group custom formatter styles for datatable*/
+
+/* over here! (wave arms)   */
+tbody.yui-dt-data td.published {
+	background-color: green;
+}
+
+tbody.yui-dt-data td.unpublished {
+	background-color: yellow;
+}
+
+
+/*@end*/
+/* striping */
+div.plank-datatable tr.yui-dt-even { background-color:#FFF; } /* white */
+div.plank-datatable tr.yui-dt-odd { background-color:#f1f2f2; } /* light blue */
+div.plank-datatable tr.yui-dt-even td.yui-dt-asc,
+div.plank-datatable tr.yui-dt-even td.yui-dt-desc { background-color:#EDF5FF; } /* light blue sorted */
+div.plank-datatable tr.yui-dt-odd td.yui-dt-asc,
+div.plank-datatable tr.yui-dt-odd td.yui-dt-desc { background-color:#DBEAFF; } /* dark blue sorted */
+
+/* highlighting */
+div.plank-datatable th.yui-dt-highlighted,
+div.plank-datatable th.yui-dt-highlighted a {
+    background-color:#B2D2FF; /* med blue hover */
+}
+div.plank-datatable tr.yui-dt-highlighted,
+div.plank-datatable tr.yui-dt-highlighted td.yui-dt-asc,
+div.plank-datatable tr.yui-dt-highlighted td.yui-dt-desc,
+div.plank-datatable tr.yui-dt-even td.yui-dt-highlighted,
+div.plank-datatable tr.yui-dt-odd td.yui-dt-highlighted {
+    cursor:pointer;
+    background-color:#B2D2FF; /* med blue hover */
+}
+
+/* Paginator Links */
+div.plank-pg-container span.yui-pg-pages .yui-pg-page {
+	margin: 5px 5px 5px 0;
+	padding: 0 0 0 5px;
+	border-left: 1px solid lightgrey;
+	font-size: 1.2em;
+}
+
+pre.xdebug-var-dump {
+	text-align:left;
+	font-size: 14px;
+}
